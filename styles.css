@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --bg-color: #fce7f3;
+    --card-bg: #fff1f5;
+    --text-main: #4d2d3a;
+    --text-sub: #8b6b7a;
+    --accent-color: #ec4899;
+    --hover-bg: #ffe4ec;
+    --border-color: #fbcfe8;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.circle {
+    position: absolute;
+    top: -100px;
+    background: radial-gradient(circle, #ffffff, var(--accent-color));
+    border-radius: 50%;
+    filter: blur(2px);
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.username {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--accent-color);
+}
+
+.links-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+.link-card:hover {
+    background-color: var(--hover-bg);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(236, 72, 153, 0.2);
+}
+
+.link-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.link-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.link-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.link-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.link-description {
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--text-sub);
+    line-height: 1.2;
+}
+
+.fa-youtube {
+    color: #ff0000;
+}
+
+.fa-twitter {
+    color: #1da1f2;
+}
+
+.fa-github {
+    color: #333;
+}
+
+.fa-reddit {
+    color: #ff4500;
+}
+
+.link-card:hover .link-icon {
+    transform: scale(1.1);
+}
