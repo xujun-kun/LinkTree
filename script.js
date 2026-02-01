@@ -18,7 +18,7 @@ const translations = {
         "link7-desc": "My shitty code is here.",
         "link8-text": "Reddit",
         "link8-desc": "Just for hobbies.",
-        "footer-copyright": "© 2025 Shu-san's LinkTree Style Trash Box",
+        "footer-copyright": "© 2025 XuJun's LinkTree Style Trash Box",
         "footer-icp": "Ji-IDP No.12052008 Rainbow Web Shu No.20081205 Operator: Xu Jun",
         "footer-address": "77 Sanba-ban, Zhongshan District, Dalian, Liaoning, PRC"
     },
@@ -64,7 +64,7 @@ const translations = {
         "link7-desc": "我的垃圾代码都在这里。",
         "link8-text": "Reddit",
         "link8-desc": "仅仅用于个人爱好。",
-        "footer-copyright": "© 2025 Shu-san 的 LinkTree 风垃圾桶",
+        "footer-copyright": "© 2025 徐军的 LinkTree 风垃圾桶",
         "footer-icp": "基IDP备12052008号 彩虹网帅备20081205号 运营者：徐军",
         "footer-address": "中华人民共和国辽宁省大连市中山区三八番七七街"
     }
