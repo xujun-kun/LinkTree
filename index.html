@@ -4,14 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>徐 军</title>
-    <meta name="description" content="徐 军">
+    <title data-i18n="title">徐 军</title>
+    <meta name="description" content="徐 军" data-i18n="description" data-i18n-attr="content">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/icon_xujun.svg">
 </head>
 
 <body>
+    <div class="language-selector">
+        <select id="lang-select">
+            <option value="ja">🇯🇵/日本語</option>
+            <option value="en">🇺🇸/English</option>
+            <option value="zh">🇨🇳/简体中文</option>
+        </select>
+    </div>
     <div class="bg-animation" id="bg-animation"></div>
     <main class="container">
         <div class="links-container">
@@ -19,8 +26,8 @@
                 <div class="link-content">
                     <img src="assets/icon_xujun.svg" alt="Icon" class="link-icon">
                     <div class="link-info">
-                        <span class="link-text">俺の自己紹介と色々</span>
-                        <span class="link-description">俺の性格や趣味などを紹介しています。</span>
+                        <span class="link-text" data-i18n="link1-text">俺の自己紹介と色々</span>
+                        <span class="link-description" data-i18n="link1-desc">俺の性格や趣味などを紹介しています。</span>
                     </div>
                 </div>
             </a>
@@ -28,8 +35,8 @@
                 <div class="link-content">
                     <img src="assets/icon_xujun.svg" alt="Icon" class="link-icon">
                     <div class="link-info">
-                        <span class="link-text">俺のブログ</span>
-                        <span class="link-description">俺のなにか。</span>
+                        <span class="link-text" data-i18n="link2-text">俺のブログ</span>
+                        <span class="link-description" data-i18n="link2-desc">俺のなにか。</span>
                     </div>
                 </div>
             </a>
@@ -37,8 +44,8 @@
                 <div class="link-content">
                     <img src="assets/icon_bulge.svg" alt="Icon" class="link-icon">
                     <div class="link-info">
-                        <span class="link-text">激エロ???マイクラパンイチツール</span>
-                        <span class="link-description">イケメンをパンイチにするツール</span>
+                        <span class="link-text" data-i18n="link3-text">激エロ???マイクラパンイチツール</span>
+                        <span class="link-description" data-i18n="link3-desc">イケメンをパンイチにするツール</span>
                     </div>
                 </div>
             </a>
@@ -46,8 +53,8 @@
                 <div class="link-content">
                     <img src="assets/icon_pmc.ico" alt="Icon" class="link-icon">
                     <div class="link-info">
-                        <span class="link-text">PlanetMinecraft</span>
-                        <span class="link-description">マイクラ関連のものを置いてる。</span>
+                        <span class="link-text" data-i18n="link4-text">PlanetMinecraft</span>
+                        <span class="link-description" data-i18n="link4-desc">マイクラ関連のものを置いてる。</span>
                     </div>
                 </div>
             </a>
@@ -55,8 +62,8 @@
                 <div class="link-content">
                     <i class="fa-brands fa-youtube link-icon"></i>
                     <div class="link-info">
-                        <span class="link-text">YouTube チャンネル</span>
-                        <span class="link-description">適当なチャンネル。</span>
+                        <span class="link-text" data-i18n="link5-text">YouTube チャンネル</span>
+                        <span class="link-description" data-i18n="link5-desc">適当なチャンネル。</span>
                     </div>
                 </div>
             </a>
@@ -64,8 +71,8 @@
                 <div class="link-content">
                     <i class="fa-brands fa-twitter link-icon"></i>
                     <div class="link-info">
-                        <span class="link-text">Twitter (X)</span>
-                        <span class="link-description">ゲイゲイしてるしエロいから閲覧注意。</span>
+                        <span class="link-text" data-i18n="link6-text">Twitter (X)</span>
+                        <span class="link-description" data-i18n="link6-desc">ゲイゲイしてるしエロいから閲覧注意。</span>
                     </div>
                 </div>
             </a>
@@ -73,8 +80,8 @@
                 <div class="link-content">
                     <i class="fa-brands fa-github link-icon"></i>
                     <div class="link-info">
-                        <span class="link-text">GitHub</span>
-                        <span class="link-description">うんコードはこちらに。</span>
+                        <span class="link-text" data-i18n="link7-text">GitHub</span>
+                        <span class="link-description" data-i18n="link7-desc">うんコードはこちらに。</span>
                     </div>
                 </div>
             </a>
@@ -82,14 +89,104 @@
                 <div class="link-content">
                     <i class="fa-brands fa-reddit link-icon"></i>
                     <div class="link-info">
-                        <span class="link-text">Reddit</span>
-                        <span class="link-description">ただの趣味でつかってる。</span>
+                        <span class="link-text" data-i18n="link8-text">Reddit</span>
+                        <span class="link-description" data-i18n="link8-desc">ただの趣味でつかってる。</span>
                     </div>
                 </div>
             </a>
         </div>
     </main>
     <script>
+        const translations = {
+            en: {
+                "title": "Xu Jun",
+                "description": "Xu Jun",
+                "link1-text": "About me and more",
+                "link1-desc": "Introduction about my personality and hobbies.",
+                "link2-text": "My Blog",
+                "link2-desc": "My things.",
+                "link3-text": "Hot Minecraft Briefs Tool",
+                "link3-desc": "Tool to make handsome guys wear only briefs.",
+                "link4-text": "PlanetMinecraft",
+                "link4-desc": "Where I put Minecraft related things.",
+                "link5-text": "YouTube Channel",
+                "link5-desc": "A random channel.",
+                "link6-text": "Twitter (X)",
+                "link6-desc": "NSFW/Gay content warning.",
+                "link7-text": "GitHub",
+                "link7-desc": "My shitty code is here.",
+                "link8-text": "Reddit",
+                "link8-desc": "Just for hobbies."
+            },
+            ja: {
+                "title": "徐 军",
+                "description": "徐 军",
+                "link1-text": "俺の自己紹介と色々",
+                "link1-desc": "俺の性格や趣味などを紹介しています。",
+                "link2-text": "俺のブログ",
+                "link2-desc": "俺のなにか。",
+                "link3-text": "激エロ???マイクラパンイチツール",
+                "link3-desc": "イケメンをパンイチにするツール",
+                "link4-text": "PlanetMinecraft",
+                "link4-desc": "マイクラ関連のものを置いてる。",
+                "link5-text": "YouTube チャンネル",
+                "link5-desc": "適当なチャンネル。",
+                "link6-text": "Twitter (X)",
+                "link6-desc": "ゲイゲイしてるしエロいから閲覧注意。",
+                "link7-text": "GitHub",
+                "link7-desc": "うんコードはこちらに。",
+                "link8-text": "Reddit",
+                "link8-desc": "ただの趣味でつかってる。"
+            },
+            zh: {
+                "title": "徐 军",
+                "description": "徐 军",
+                "link1-text": "关于我以及各种",
+                "link1-desc": "介绍我的性格和爱好等。",
+                "link2-text": "我的博客",
+                "link2-desc": "我的一些动态。",
+                "link3-text": "激H??? 我的世界内裤工具",
+                "link3-desc": "把帅哥变成只穿内裤的工具。",
+                "link4-text": "PlanetMinecraft",
+                "link4-desc": "存放我的世界相关内容的地方。",
+                "link5-text": "YouTube 频道",
+                "link5-desc": "随便弄的频道。",
+                "link6-text": "Twitter (X)",
+                "link6-desc": "同性行为内容及色情预警。",
+                "link7-text": "GitHub",
+                "link7-desc": "我的垃圾代码都在这里。",
+                "link8-text": "Reddit",
+                "link8-desc": "仅仅用于个人爱好。"
+            }
+        };
+
+        function updateLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const translation = translations[lang][key];
+                if (translation) {
+                    const attr = el.getAttribute('data-i18n-attr');
+                    if (attr) {
+                        el.setAttribute(attr, translation);
+                    } else {
+                        el.textContent = translation;
+                    }
+                }
+            });
+            localStorage.setItem('preferred-lang', lang);
+        }
+
+        const langSelect = document.getElementById('lang-select');
+        const savedLang = localStorage.getItem('preferred-lang') || (navigator.language.startsWith('zh') ? 'zh' : navigator.language.startsWith('ja') ? 'ja' : 'en');
+
+        langSelect.value = translations[savedLang] ? savedLang : 'en';
+        updateLanguage(langSelect.value);
+
+        langSelect.addEventListener('change', (e) => {
+            updateLanguage(e.target.value);
+        });
+
         const bg = document.getElementById('bg-animation');
         for (let i = 0; i < 15; i++) {
             const c = document.createElement('div');
